@@ -76,9 +76,8 @@
     bottom: 0;
     /*background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-    /* backdrop-filter: linear-gradient(to bottom, transparent, blur(2px)); */
     mask: linear-gradient(to bottom, transparent, black 100%, black 30%, black 0%);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     pointer-events: none;
     z-index: 1;
 }
@@ -90,4 +89,13 @@ html {
 .top {
     position: relative;
     z-index: 100;
+}
+
+
+img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
