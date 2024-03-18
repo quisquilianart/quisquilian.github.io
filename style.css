@@ -68,7 +68,7 @@
 .overlay {
     position: fixed;
     width: 100%;
-    height: 70%;
+    height: 90%;
     /* margin-top: 0px; */
     /* top: 0; */
     left: 0;
@@ -76,13 +76,36 @@
     bottom: 0;
     /*background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8), rgba(0,0,0,1));
-    mask: linear-gradient(to bottom, transparent, black 70%);
+    /* mask: linear-gradient(transparent, black 90%, black 70%); */
+    mask: linear-gradient(180deg, rgb(99.608% 99.608% 99.608% / 0) 0%, rgb(82.074% 82.074% 82.074% / 0.176025390625) 6.25%, rgb(66.729% 66.729% 66.729% / 0.330078125) 12.5%, rgb(53.427% 53.427% 53.427% / 0.463623046875) 18.75%, rgb(42.022% 42.022% 42.022% / 0.578125) 25%, rgb(32.368% 32.368% 32.368% / 0.675048828125) 31.25%, rgb(24.318% 24.318% 24.318% / 0.755859375) 37.5%, rgb(17.728% 17.728% 17.728% / 0.822021484375) 43.75%, rgb(12.451% 12.451% 12.451% / 0.875) 50%, rgb(8.341% 8.341% 8.341% / 0.916259765625) 56.25%, rgb(5.253% 5.253% 5.253% / 0.947265625) 62.5%, rgb(3.04% 3.04% 3.04% / 0.969482421875) 68.75%, rgb(1.556% 1.556% 1.556% / 0.984375) 75%, rgb(0.657% 0.657% 0.657% / 0.993408203125) 81.25%, rgb(0.195% 0.195% 0.195% / 0.998046875) 87.5%, rgb(0.024% 0.024% 0.024% / 0.999755859375) 93.75%, rgb(0% 0% 0%) 100% );
     /* mask: radial-gradient(circle at top, #0000 20px, rgba(0, 0, 0, 0.9) 800px); */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     pointer-events: none;
     z-index: 1;
 }
 
+@media only screen and (max-width: 1100px) {
+  body {
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 40%;
+      /* margin-top: 0px; */
+      /* top: 0; */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /*background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8), rgba(0,0,0,1));
+      /* mask: linear-gradient(transparent, black 90%, black 70%); */
+      mask: linear-gradient(180deg, rgb(99.608% 99.608% 99.608% / 0) 0%, rgb(82.074% 82.074% 82.074% / 0.176025390625) 6.25%, rgb(66.729% 66.729% 66.729% / 0.330078125) 12.5%, rgb(53.427% 53.427% 53.427% / 0.463623046875) 18.75%, rgb(42.022% 42.022% 42.022% / 0.578125) 25%, rgb(32.368% 32.368% 32.368% / 0.675048828125) 31.25%, rgb(24.318% 24.318% 24.318% / 0.755859375) 37.5%, rgb(17.728% 17.728% 17.728% / 0.822021484375) 43.75%, rgb(12.451% 12.451% 12.451% / 0.875) 50%, rgb(8.341% 8.341% 8.341% / 0.916259765625) 56.25%, rgb(5.253% 5.253% 5.253% / 0.947265625) 62.5%, rgb(3.04% 3.04% 3.04% / 0.969482421875) 68.75%, rgb(1.556% 1.556% 1.556% / 0.984375) 75%, rgb(0.657% 0.657% 0.657% / 0.993408203125) 81.25%, rgb(0.195% 0.195% 0.195% / 0.998046875) 87.5%, rgb(0.024% 0.024% 0.024% / 0.999755859375) 93.75%, rgb(0% 0% 0%) 100% );
+      /* mask: radial-gradient(circle at top, #0000 20px, rgba(0, 0, 0, 0.9) 800px); */
+      backdrop-filter: blur(20px);
+      pointer-events: none;
+      z-index: 1;
+  }
+  }
+}
 html {
     scroll-behavior: smooth;
   }
@@ -116,12 +139,12 @@ img{
 }
 
 .wrapper {
-	overflow: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 110%;
 	height: 100%;
+  transform: translate(-100px, -290px);
   z-index: -1;
 }
 
@@ -204,7 +227,7 @@ img{
 
 @keyframes triangle-animation{
 	0%{
-		transform: scale(0) rotate(0deg);
+		transform: scale(0) rotate(60deg);
 		opacity: 1;
 	}
 	
